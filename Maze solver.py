@@ -1,4 +1,4 @@
-from pyamaze import maze, agent, COLOR
+from pyamaze import maze, agent, COLOR, textLabel
 from queue import PriorityQueue
 
 def h(cell1, cell2):
@@ -55,5 +55,6 @@ m.CreateMaze()
 path = aStar(m)
 a = agent(m, footprints=True, color=COLOR.blue, filled=True)
 m.tracePath({a:path})
+l = textLabel(m, "A* path length", len(path)+1)
 
 m.run()
