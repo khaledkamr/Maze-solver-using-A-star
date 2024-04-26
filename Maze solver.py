@@ -1,4 +1,4 @@
-from pyamaze import maze, agent
+from pyamaze import maze, agent, COLOR
 from queue import PriorityQueue
 
 def h(cell1, cell2):
@@ -50,10 +50,10 @@ def aStar(m):
 
     return fwdPath
 
-m = maze(20,20)
+m = maze(10,10)
 m.CreateMaze()
 path = aStar(m)
-a = agent(m, footprints=True)
+a = agent(m, footprints=True, color=COLOR.blue, filled=True)
 m.tracePath({a:path})
 
 m.run()
