@@ -57,7 +57,7 @@ def aStar(m):
 
     return fwdPath
 
-m = maze(5,5)
+m = maze(10,10)
 m.CreateMaze()
 path = aStar(m)
 a = agent(m, footprints=True, color=COLOR.blue, filled=True)
